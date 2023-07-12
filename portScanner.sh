@@ -2,6 +2,7 @@
 
 function ctrl_c(){
   echo -e "\n\n[!] Saliendo...\n"
+  tput cnorm; exit 1
   exit 1
 }
 
@@ -22,6 +23,8 @@ function checkPort(){
   exec 3>&-
 }
 
+tput civis # Ocultar el cursor
+
 if [ $1 ]; then
   for port in ${ports[@]}; do
     checkPort $1 $port  &
@@ -31,3 +34,5 @@ else
 fi
 
 wait
+
+tput cnorm
