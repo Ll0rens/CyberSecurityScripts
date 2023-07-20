@@ -1,4 +1,6 @@
 # TTYOverHTTP
+Este código ha sido sacado de https://github.com/s4vitar/ttyoverhttp
+Thanks S4vitar
 
 En ocasiones cuando comprometemos un servidor web, hay reglas configuradas (**Ej: iptables**) que nos impiden obtener una Reverse Shell vía Netcat, Python, u otra utilidad.
 
